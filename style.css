@@ -1,0 +1,84 @@
+html {
+    font-size: 18px; /* px means "pixels": the base font size is now 10 pixels high */
+  }
+
+h1 {
+    font-size: 35px;
+    text-align: center;
+    margin: 2;
+    padding: 20px 0;
+  }
+
+body {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px 20px 20px;
+}
+
+h1 {
+    margin: 0;
+    padding: 20px 0;
+    color: black;
+    text-align: center;
+}
+
+h3 {
+    margin: 0;
+    padding: 20px 0;
+    font-size: 25px;
+    color: black;
+    text-align: left;
+}
+
+.tg {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.tg td {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    overflow: hidden;
+    padding: 10px 5px;
+    word-break: normal;
+}
+
+.tg th {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    overflow: hidden;
+    padding: 10px 5px;
+    word-break: normal;
+}
+
+.tg .tg-0lax {
+    text-align: left;
+    vertical-align: top;
+}
+
+.center {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.image {
+    flex: 0 0 70%; /* Don't allow the image to grow or shrink */
+    margin-right: 20px; /* Add some space between image and text */
+}
+
+.text {
+    flex: 1;
+    margin-right: 10px; /* Adjust the margin between the text and map */
+}
+
+.center {
+    flex: 4; /* Increase the size of the map */
+}
