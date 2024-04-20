@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demographic Distribution of Public Open Space Access Across California</title>
+    <link href="style.css" rel="stylesheet" />
+</head>
+<body>
+    
+    <h1> Demographic Distribution of Public Open Space Access Across California </h1>
+    <h3> Introduction</h3>
+
+    <p>Access to public open spaces are important for anyone in an urban environment; 
+        with 94.2% of California residents living in an urban area (Cox, 2023), the matter is 
+        especially pertinent to the state. Public open spaces have been found to improve both the
+        physical health and mental well being for those in surrounding areas. A study published in 
+        2018 recorded a negative correlation between urban green space exposure and mortality, 
+        heart rate, and violence, and a positive correlation between attention, mood, and physical 
+        activity (Kondo et al., 2018). In addition, green spaces are the most effective way to protect 
+        residents from extreme heat, flooding, and poor air quality (Foderaro and Klein, 2013). 
+        Apart from physical benefits, public open spaces bolster a sense of community, well being,
+        and enrichment in individuals. </p>
+
+    <p>Monitoring the unemployment rate provides insights into 
+        various aspects of the economy, such as consumer spending,
+         business confidence, and government policies' effectiveness.
+        A high unemployment rate may indicate economic downturns, 
+        leading to decreased consumer spending, reduced business 
+        investments, and potential social unrest. Conversely, 
+        a low unemployment rate signifies a robust economy with 
+        ample job opportunities, contributing to higher consumer 
+        confidence and economic growth.</p>
+
+    <p>Each person living in an urban area deserves equal access to public open spaces 
+        and the accompanying benefits, regardless of their race, age, income, or level of education. 
+        By analyzing and visualizing the distribution of different demographic groups in California 
+        and their access to public open spaces, we hope to identify areas in which increased efforts
+        to develop open spaces should be made. </p>
+
+    <h3>Data Introduction</h3>
+    <div class = 'container'>
+        <div class = 'image'>
+            <iframe src="composition.png" width="100%" height="700px" frameborder="0"></iframe>
+        </div>
+        <div class = 'text'>
+            <p> Our dataset was taken from the <a href="https://data.cnra.ca.gov/dataset/access-explorer-all-areas-open-access-enriched">California Natural Resources Agency</a> and is called 
+                “Access Explorer All Areas Open Access Enriched.” The dataset focuses on areas in 
+                California that are accessible to the public and are meant for conservation. These areas are 
+                preserved for natural resources, wildlife habitat, and public enjoyment. We will be 
+                accessing the dataset in a CSV file, with the size of 2319 entries with 73 columns as of April 
+                15, 2022.  Geographic variables include the city and/or county the area is located in, which 
+                will serve as a baseline for comparison between areas. Demographic variables of the data 
+                include population, educational attainment, housing unit occupancy, Hispanic or Latino 
+                origin, race, and household income. The combination of these variables can point to where
+                people in California can access open, conserved spaces and help us understand access to 
+                nature and conservation efforts within the state as whole.</p>
+        
+            <p> We also supplemented out map visualizations with data from <a href="https://www.naturalearthdata.com/downloads/">Natural Earth</a>. 
+                This includes shapefile data that we subsequently merged with the open space data. We did 
+                this merge on the "county" column in both datasets. </p>
+        
+            <p> This visualization is a introduction our data, giving the racial and ethnic composition
+                across all counties in California: </p>
+        </div>               
+    </div>
+
+    <div class='container'>
+        <div class="text">
+            <p>As part of the EDA process, we wanted to look at if income levels varied based on education level. To change the education level, change the input in the dropdown menu. Although there are 
+                difference in income between the different education levels, they are minor. The distribution is almost identical. It seems that regardless of education level, the majority of income levels lie between $50-100K a year.
+                
+            </p>
+        </div>
+        <div class="center">
+            <iframe src="income_edulvl.html" width="100%" height="500px" frameborder="0"></iframe>
+        </div>   
+    </div>
+
+    <h3>Distribution of Access to Open Space Across Income Groups</h3>
+    <div class = 'container'>
+        <div class = 'image'>
+            <iframe src="income.png" width="600px" height="400px" frameborder="0"></iframe>
+        </div>
+        <div class = 'text'>
+            <p> We wanted to visualize the number of people in each income bracket with access to public open space, as well
+                as see how the access varied between groups. California residents who made between $100,000 - $150,000 had the greatest
+                access to open space, and there was a general trend of higher income groups having higher access. This map was created 
+                using matplotlib and seaborn in Python.  
+           </p>
+        
+        </div>               
+    </div>
+
+    <h3>Distribution of Access to Open Space Across Races</h3>
+    <div class = 'container'>
+        <div class = 'image'>
+            <iframe src="race.png" width="600px" height="400px" frameborder="0"></iframe>
+        </div>
+        <div class = 'text'>
+            <p> Across the racial groups, white residents had the greatest access to open spaces with approximately 
+                14 million people, followed by hispanic residents at approximately 11 million pepole. Pacific islanders and 
+                Native American people had the lowest access at only a few million. This could either be due to disproportionate funding
+                or white and hispanic people making up more of the total population. This map was created 
+                using matplotlib and seaborn in Python.
+            </p>
+        </div>               
+    </div>
+
+    <h3>Distribution of Access to Open Space Across Ages</h3>
+    <div class = 'container'>
+        <div class = 'image'>
+            <iframe src="age.png" width="600px" height="400px" frameborder="0"></iframe>
+        </div>
+        <div class = 'text'>
+            <p> Residents under the age of 40 had the greatest access to open space, and access steadily inclined as 
+                people got older. This could be attributed to young adults living in affluent neighborhoods with funding for 
+            open spaces, as well as families with young children wanting to live near parks. This map was created 
+            using matplotlib and seaborn in Python. </p>
+        
+        </div>               
+    </div>
+
+    <h3>Distribution of Access to Open Space Across Educational Attainment Levels</h3>
+    <div class = 'container'>
+        <div class = 'image'>
+            <iframe src="education.png" width="600px" height="400px" frameborder="0"></iframe>
+        </div>
+        <div class = 'text'>
+            <p> People who obtained a bachelor's degree had the highest access to open space, but even those who attended
+                college for less than four years had similar rates. However, the categories of people who completed less than 
+                a high school degree had significantly lower access. This map was created 
+                using matplotlib and seaborn in Python.</p>
+        
+        </div>               
+    </div>
+        
+        <h3> Racial Groups with Highest Access to Open Space in California</h3>
+        <div class="container">
+            <div class="text">
+                <p>We want to examine the spatial relationship between demographic features and open space access. These map visualizations break down the demographic data by county, examining the demographic group with the highest access to open space in each county. The map to the right visualizes he racial group with the highest access to open space in each county. This map was created using folium in Python and visualized with each racial group as a different color on a colormap. This map also includes tooltips to display each county name and pop out functions to show exact counts.
+                </p>
+            </div>
+            <div class="center">
+                <iframe src="race_map.html" width="100%" height="500px" frameborder="0"></iframe>
+            </div>   
+        </div>
+
+        <h3> Income and Education Levels with the Highest Access to Open Space in California</h3>
+        <div class="container">
+            <div class="text">
+                <p>This map displays two different map layers on top of each other, one displaying open space access for different income levels and the other for education levels. This data is ordinal in nature and therefore each level is delineated by a cascading colormap. The different layers can be selected and deselected in the top right corner, and the legends can be moved around for visibility. </p>
+            </div>
+            <div class="center">
+                <iframe src="income_edu_map.html" width="100%" height="500px" frameborder="0"></iframe>
+            </div>   
+        </div>
+
+        <h3>Summary of Findings</h3>
+        <p>
+            Our findings highlight the socioeconomic disparities in open space access across 
+            California. We found that the largest groups of people with access to public open spaces 
+            (POS) are in the age ranges of 20-29 and 30-39. This group of people is generally 
+            considered to have the highest proportion of able-bodied individuals. Therefore, different 
+            age groups could benefit from more access to open space. Higher income brackets have 
+            higher access to open spaces. Specifically, counties with higher income levels tend to have 
+            better access to open spaces, which might reflect socioeconomic disparities in the
+            availability and utilization of such areas.  
+        </p>
+        <p>
+            In the most densely populated areas (near San Francisco and Los Angeles) access to
+            open space is correlated to higher income and education levels. This highlights the 
+            socioeconomic disparities between open space access in urban areas, where open space 
+            access is sparse. Minority groups: hispanic, amerind (indigenous people), and black people 
+            have the least access to open space in California. In Southern California the racial group 
+            with the highest access to open space is White. In the Bay Area there is a mix of white, non 
+            hispanic, and hispanic populations with the highest access to open space, and in Northern 
+            California the racial group is mainly non hispanic. 
+        </p>
+
+        <p>Open space access is highly correlated to life quality. It has great healthy benefits, 
+            both mental and physical. Therefore, everyone deserves access to such public benefits. 
+            However, our project highlights that not everyone has access to such benefits, and this lack 
+            of access is often correlated to marginalization. This calls for urgent action to address the 
+            systemic inequalities in open space access across California. It is important that 
+            policymakers, urban planners, and community leaders work together to solve this issue. 
+            This could include investing in the creation and maintenance of accessible green spaces in 
+            areas with high minority populations and lower socioeconomic status. By prioritizing 
+            equity in open space planning and management, we can promote social justice, public 
+            health, and inclusivity. 
+        </p>
+
+        <h3>References</h3>
+
+        <p>To learn more about the role of public open space access in a healthy and sustainable society,
+            you can learn more by reading these articles: </p>
+            
+           <p>Chiesura, Anna. “The Role of Urban Parks for the Sustainable City.” 
+            Landscape and Urban Planning, vol. 68, no. 1, May 2004, pp. 129–38. 
+            ScienceDirect, https://doi.org/10.1016/j.landurbplan.2003.08.003.</p>
+   
+           <p>Kondo, Michelle C., et al. “Urban Green Space and Its Impact on Human Health.” 
+            International Journal of Environmental Research and Public Health, vol. 15, no. 3, 
+            Mar. 2018, p. 445. www.mdpi.com, https://doi.org/10.3390/ijerph15030445. </p>
+
+</body>
+</html>
